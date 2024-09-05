@@ -1,0 +1,18 @@
+<div class="horizontal-scroll">
+    <div class="row-icons top-icons">
+        <div class="icons">
+            <a *ngFor="let icon of topIcons" [routerLink]="icon.link" class="icon-link">
+                <img class="track-icon" [src]="icon.imgUrl" [alt]="icon.alt">
+                <div class="icon-text">{{ icon.alt }}</div>
+            </a>
+        </div>
+    </div>
+    <div class="row-icons bottom-icons">
+        <div class="icons">
+            <a *ngFor="let icon of bottomIcons" [routerLink]="icon.link" class="icon-link">
+                <img class="track-icon" [src]="icon.imgUrl" [alt]="icon.alt">
+                <div class="icon-text">{{ icon.alt }}</div>
+            </a>
+        </div>
+    </div>
+</div>

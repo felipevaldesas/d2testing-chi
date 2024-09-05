@@ -1,0 +1,44 @@
+@import url(./../services/services.component.scss);
+
+#title-col {
+    font-style: italic;
+    top: 8em;
+    margin-top: unset !important;
+    position: relative;
+}
+#header-section {
+    background-image:  linear-gradient(to top, #101010 5%, transparent), 
+                        url('/assets/images/background/background_asesoramiento.jpg');
+    height: 55vw;   
+    .text-services {
+        height: 85vh;
+    } 
+    .title-services {
+        font-size: 61px;
+        bottom: unset;
+        margin-top: 30vh;
+        margin-bottom: 20vh;
+
+        .highlighted {
+            color: #ffd966;
+        }
+    }
+}
+#cards-section {
+    .text-services .col-md-12 {
+        .title-services {
+            margin-bottom: 2em;
+        }
+    }
+}
+#body-section {
+    .text-services {
+        max-width: none;
+        width: 100%;
+        .col-md-12 {
+            margin-top: unset !important;
+            margin-bottom: unset !important;
+            padding: unset;
+        }
+    }
+}

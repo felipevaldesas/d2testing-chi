@@ -1,0 +1,104 @@
+<div class="services-principal" id="header-section">
+    <div class="row text-services">
+        <div class="col-md-12" id="title-col">
+            <h1> 
+                Mercado de Capitales
+            </h1>
+        </div>
+        <div class="col-md-12">
+            <h3 class="title-services" 
+                    data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500"
+            >
+                Optimizamos tus inversiones con  estrategias financieras y análisis de mercado que incrementan el rendimiento de tu capital
+            </h3>
+            <div class="contact-phone">
+                <a href="https://api.whatsapp.com/send?phone=56939538862" target="_blank" class="whatsapp-button">
+                    <i class="fa fa-whatsapp social-icon"></i> Agendar una asesoría
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="cards-section">
+    <div class="row text-services">
+        <div class="col-md-12 office-col">
+            <h2 class="title-services">
+                Capital Markets
+            </h2>
+            <h3 class="subtitle-services">
+                Mercado de capitales 
+            </h3>
+            <p class="description-title text-light">
+                La división de Mercados de Capitales se especializa en la intermediación de
+                propiedades y carteras de inversión. Aprovechando nuestro profundo
+                conocimiento de los mercados clave de América del Sur y nuestra capacidad
+                para identificar tanto capital agresivo nacional como internacional, creamos
+                oportunidades en adquisición, desinversión, "Sale & Lease Back", y la búsqueda
+                de socios inversionistas.
+            </p>
+            <h2 class="title-services mb-5">
+                Servicios para propietarios y usuarios
+            </h2>
+            <app-generic-cards [styles]="stylesCorporate" [data]="corporateCards"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="why-us-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <app-generic-why-us [data]="whyUsData"></app-generic-why-us>
+        </div>
+    </div>    
+</div>
+<div class="services-principal" id="work-section">
+    <div class="row text-services">  
+        <div class="col-md-12">
+            <h2 class="title-services">
+                Análisis financiero del activo
+            </h2>
+            <app-generic-cards [styles]="styleServicesCards" [data]="financeCards"></app-generic-cards>
+        </div>
+        <div class="col-md-12">
+            <h2 class="title-services">
+                Estrategias de comercialización
+            </h2>
+            <app-generic-cards [styles]="styleProjectServicesCards" [data]="projectCards"></app-generic-cards>
+        </div>    
+        <div class="col-md-12">
+            <h2 class="title-services">
+                Comparación con el mercado
+            </h2>
+            <app-generic-cards [styles]="styleServicesCards" [data]="legalCards"></app-generic-cards>
+        </div>            
+    </div>
+</div>
+<div class="services-principal" id="team-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <h2 class="title-services">
+                Nuestro equipo de Capital Market
+            </h2>
+            <app-generic-cards [data]="teamCards" [styles]="stylesTeam"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="cards-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <h2 class="title-services mb-5" align="center">
+                Noticias y Artículos
+            </h2>
+            <app-generic-cards [styles]="stylesNews" [data]="newsCards"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="contact-section">
+    <div class="row text-services">
+        <div class="col-md-12 col-contact">
+            <app-generic-contact [text]="contactText"></app-generic-contact>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

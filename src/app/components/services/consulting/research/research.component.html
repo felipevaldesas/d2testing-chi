@@ -1,0 +1,79 @@
+<div class="services-principal" id="header-section">
+    <div class="row text-services">
+        <div class="col-md-12" id="title-col">
+            <h1> 
+                Investigación de Mercados
+            </h1>
+        </div>
+        <div class="col-md-12">
+            <h3 class="title-services" 
+                    data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500"
+            >
+            Estudiamos el mercado y analizamos los comportamientos de las industrias, identificando oportunidades que impulsen el crecimiento y la rentabilidad de tus activos.
+            </h3>
+            <div class="contact-phone">
+                <a href="https://api.whatsapp.com/send?phone=56939538862" target="_blank" class="whatsapp-button">
+                    <i class="fa fa-whatsapp social-icon"></i> Agendar una asesoría
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="cards-section">
+    <div class="row text-services">
+        <div class="col-md-12 office-col">
+            <h2 class="title-services">
+                Market Research
+            </h2>
+            <h3 class="subtitle-services">
+                Investigación de mercados
+            </h3>
+            <p class="description-title text-light">
+                Ofrecemos servicios de investigación de mercado que proporcionan conocimientos basados en datos sobre tendencias del mercado inmobiliario comercial, 
+                brindando a los clientes un análisis sólido de las condiciones del mercado, pronósticos y posicionamiento estratégico. Estos servicios están diseñados 
+                para apoyar la toma de decisiones informadas y la planificación estratégica tanto para inversores como para ocupantes. 
+            </p>
+            <h2 class="title-services mb-5">
+                Servicios para empresas
+            </h2>
+            <app-generic-cards [styles]="styleServicesCards" [data]="financeCards"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="why-us-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <app-generic-why-us [data]="whyUsData"></app-generic-why-us>
+        </div>
+    </div>    
+</div>
+<!-- <div class="services-principal" id="team-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <h2 class="title-services">
+                Nuestro equipo de Corporate Services
+            </h2>
+            <app-generic-cards [data]="teamCards" [styles]="stylesTeam"></app-generic-cards>
+        </div>
+    </div>
+</div> -->
+<div class="services-principal" id="cards-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <h2 class="title-services mb-5" align="center">
+                Noticias y Artículos
+            </h2>
+            <app-generic-cards [styles]="stylesNews" [data]="newsCards"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="contact-section">
+    <div class="row text-services">
+        <div class="col-md-12 col-contact">
+            <app-generic-contact [text]="contactText"></app-generic-contact>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

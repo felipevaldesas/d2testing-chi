@@ -1,0 +1,40 @@
+@import url(./../about/about.component.scss);
+#header-section {
+    background-image:  linear-gradient(to top, #101010 5%, transparent);
+    height: 92vh;
+}
+#body-section {
+    .col-info {
+        font-style: italic;
+        font-size: 18px;
+        align-content: center;
+        cursor: pointer;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+}
+#map-section {
+    background-image:  linear-gradient(to top, #101010 5%, transparent);
+    .map {
+        max-width: none;
+        width: 100%;
+        .map-info {
+            padding: unset;
+        }
+    }
+}
+#title-col {
+    top: unset;
+    margin-top: 4em !important;
+}
+@media (max-width: 768px) {
+    #header-section {
+        margin-bottom: 35em;
+        position: relative;
+        bottom: 10em;
+        height: unset;
+    }
+    #map-section {
+        display: flex;
+    }
+}

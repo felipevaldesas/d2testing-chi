@@ -1,0 +1,76 @@
+<div class="services-principal" id="header-section">
+    <div class="row text-services">
+        <div class="col-md-12" id="title-col">
+            <h1> Servicios de Asesoramiento & Transacciones </h1>
+        </div>
+        <div class="col-md-12">
+            <h3 class="title-services" 
+                    data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500"
+            >
+                Expertos en operaciones de arriendo y venta de oficinas, locales comerciales, bodegas industriales y terrenos
+            </h3>
+            <div class="contact-phone">
+                <a href="https://api.whatsapp.com/send?phone=56994763258" target="_blank" class="whatsapp-button">
+                    <i class="fa fa-whatsapp social-icon"></i> Agendar una asesoría
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="cards-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <app-generic-cards [styles]="stylesCards" [data]="advisoryCards"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal"  id="body-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <app-generic-why-us [data]="whyUsData"></app-generic-why-us>
+        </div>
+    </div>    
+</div>
+<div class="services-principal" id="cards-section">
+    <div class="row text-services">
+        <div class="col-md-12 mt-5 mb-5">
+            <h2 class="title-services">
+                Nuestro Equipo
+            </h2>
+            <app-generic-cards class="desktop-team d-none d-md-block" [styles]="stylesTeam" [data]="teamCards"></app-generic-cards>
+            <app-generic-track-record class="mobile-team d-block d-md-none" [icons]="teamCards"></app-generic-track-record>
+        </div>
+    </div>
+</div>
+<div class="services-principal">
+    <div class="row text-services">
+        <div class="col-section">
+            <h2 class="title-services">
+                Portal de oficinas, locales, bodegas y suelos
+            </h2>
+            <h3 class="subtitle-services">
+                Encuentra la propiedad que necesitas.
+            </h3>
+            <img class="mw-100" src="assets/images/services/portal_properties.png" alt="">
+            <div class="btn-container">
+                <button class="btn-view" (click)="goProperties()">
+                    <mat-icon>apartment</mat-icon>
+                    Ver propiedades
+                </button>
+            </div>
+        </div>
+    </div>    
+</div>
+<div class="services-principal" id="cards-section">
+    <div class="row text-services">
+        <div class="col-md-12 mt-5 mb-5">
+            <h2 class="title-services">
+                Noticias y Artículos
+            </h2>
+            <app-generic-cards [styles]="stylesNews" [data]="newsCards"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

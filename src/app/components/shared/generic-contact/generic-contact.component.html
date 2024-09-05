@@ -1,0 +1,70 @@
+<div class="about__body row">
+    <div class="col-md-6 col-title">
+        <mat-icon class="icon-question">question_mark</mat-icon>
+        <p class="description" [innerHTML]="text"></p>
+    </div>
+    <div class="col-md-6 contact-form">
+        <h3 class="subtitle">Contáctanos</h3>
+        <form [formGroup]="contactForm" id="contact-form" (ngSubmit)="submitForm()">
+            <div class="row">
+                <div class="legend-required"> Campos requeridos están marcados con un asterisco (*) </div>
+                <div class="col-md-12">
+                    <label for="name">Nombre <div class="asterisc">&nbsp;*</div></label>
+                    <div class="input-group">
+                        <input type="text" id="name" autocomplete="name" formControlName="name" placeholder="Nombre"
+                                [ngClass]="{'invalid-field': contactForm.get('name')?.invalid && contactForm.get('name')?.touched}">
+                            <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="error-message">
+                                <div *ngIf="contactForm.get('name')?.errors?.['required']">Este campo es obligatorio.</div>
+                                <div *ngIf="contactForm.get('name')?.errors?.['minlength']">El nombre debe tener al menos 3 caracteres.</div>
+                                <div *ngIf="contactForm.get('name')?.errors?.['maxlength']">El nombre no debe exceder los 50 caracteres.</div>
+                                <div *ngIf="contactForm.get('name')?.errors?.['pattern']">Formato de nombre inválido.</div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="telf">Teléfono <div class="asterisc">&nbsp;*</div></label>
+                    <div class="input-group">
+                        <input type="tel" id="telf" formControlName="telf" placeholder="Teléfono"
+                                [ngClass]="{'invalid-field': contactForm.get('telf')?.invalid && contactForm.get('telf')?.touched}">
+                            <div *ngIf="contactForm.get('telf')?.invalid && contactForm.get('telf')?.touched" class="error-message">
+                                <div *ngIf="contactForm.get('telf')?.errors?.['required']">Este campo es obligatorio.</div>
+                                <div *ngIf="contactForm.get('telf')?.errors?.['minlength']">El teléfono debe tener al menos 8 caracteres.</div>
+                                <div *ngIf="contactForm.get('telf')?.errors?.['maxlength']">El teléfono no debe exceder los 15 caracteres.</div>
+                                <div *ngIf="contactForm.get('telf')?.errors?.['pattern']">Formato de teléfono inválido.</div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label for="email">Correo Electrónico <div class="asterisc">&nbsp;*</div></label>
+                    <div class="input-group">
+                        <input type="email" id="email" autocomplete="email" formControlName="email" placeholder="Correo Electrónico"
+                                [ngClass]="{'invalid-field': contactForm.get('email')?.invalid && contactForm.get('email')?.touched}">
+                            <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="error-message">
+                                <div *ngIf="contactForm.get('email')?.errors?.['required']">Este campo es obligatorio.</div>
+                                <div *ngIf="contactForm.get('email')?.errors?.['email']">Formato de correo electrónico inválido.</div>
+                                <div *ngIf="contactForm.get('email')?.errors?.['minlength']">El correo debe tener al menos 9 caracteres.</div>
+                                <div *ngIf="contactForm.get('email')?.errors?.['maxlength']">El correo no debe exceder los 50 caracteres.</div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="message">Mensaje</label>
+                    <div class="input-group">
+                        <textarea id="message" formControlName="message" placeholder="Mensaje" rows="9"
+                                    [ngClass]="{'invalid-field': contactForm.get('message')?.invalid && contactForm.get('message')?.touched}"></textarea>
+                            <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="error-message">
+                                <div *ngIf="contactForm.get('message')?.errors?.['minlength']">El mensaje debe tener al menos 5 caracteres.</div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" [disabled]="contactForm.invalid" class="submit-button">
+                Enviar
+            </button>
+        </form>
+    </div>
+</div>

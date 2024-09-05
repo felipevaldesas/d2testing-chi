@@ -1,0 +1,142 @@
+<div class="services-principal" id="header-section">
+    <div class="row text-services">
+        <div class="col-md-12" id="title-col">
+            <h1> 
+                Servicios Corporativos
+            </h1>
+        </div>
+        <div class="col-md-12">
+            <h3 class="title-services" 
+                    data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500"
+            >
+                “Apoyamos el desarrollo empresarial <span class="highlighted"> ofreciendo soluciones integrales </span> en bienes 
+                raíces corporativos proporcionando asesoramiento experto”
+            </h3>
+            <div class="contact-phone">
+                <a href="https://api.whatsapp.com/send?phone=56939538862" target="_blank" class="whatsapp-button">
+                    <i class="fa fa-whatsapp social-icon"></i> Agendar una asesoría
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="cards-section">
+    <div class="row text-services">
+        <div class="col-md-12 office-col">
+            <h2 class="title-services">
+                Corporate Services
+            </h2>
+            <h3 class="subtitle-services">
+                Servicios Corporativos 
+            </h3>
+            <p class="description-title text-light">
+                Ofrecemos una amplia gama de servicios corporativos diseñados para satisfacer las necesidades diversas 
+                y dinámicas de nuestros clientes empresariales. Nuestros servicios están estructurados para apoyar a las 
+                empresas en cada etapa de su desarrollo, desde la creación hasta la expansión, garantizando una  
+                gestión eficiente y eficaz de sus operaciones.
+            </p>
+            <h2 class="title-services title-mobile mb-5">
+                Servicios para empresas
+            </h2>
+            <app-generic-cards [styles]="stylesCorporate" [data]="corporateCards"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="our-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <h2 class="title-services title-mobile">
+                Consultoría Estratégica
+            </h2>
+            <app-generic-cards [styles]="stylesStrategyCards" [data]="strategyCards"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="why-us-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <app-generic-why-us [data]="whyUsData"></app-generic-why-us>
+        </div>
+    </div>    
+</div>
+<div class="services-principal" id="work-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <h2 class="title-services title-mobile">
+                Servicios Inmobiliarios
+            </h2>
+            <p class="description-title">
+                Guiamos a nuestros clientes desde la selección de opciones hasta la firma del contrato, 
+                asegurando un proceso claro y efectivo en cada etapa.
+            </p>
+            <app-generic-cards [styles]="stylesWorkFlowCards" [data]="workflowCards"></app-generic-cards>
+        </div>  
+        <div class="col-md-12">
+            <h2 class="title-services title-mobile">
+                Asesorías Financieras
+            </h2>
+            <app-generic-cards [styles]="styleServicesCards" [data]="financeCards"></app-generic-cards>
+        </div>
+        <div class="col-md-12">
+            <h2 class="title-services title-mobile">
+                Project Management
+            </h2>
+            <app-generic-cards [styles]="styleProjectServicesCards" [data]="projectCards"></app-generic-cards>
+        </div>    
+        <div class="col-md-12">
+            <h2 class="title-services title-mobile">
+                Servicios Legales
+            </h2>
+            <app-generic-cards [styles]="styleServicesCards" [data]="legalCards"></app-generic-cards>
+        </div>            
+    </div>
+</div>
+<div class="services-principal service-comment" id="cards-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <div class="row row-comment">
+                <div class="col-md-1 comment-icon comment-icon-left">
+                    <i class="fa fa-quote-left"></i>
+                </div>
+                <div class="col-md-10">
+                    <p class="comment-title text-light">
+                        En Diagonal2, nos dedicamos a proporcionar soluciones integrales y personalizadas que impulsen el éxito de nuestros clientes. Nuestro equipo de expertos está comprometido con la excelencia y la innovación, asegurando que su empresa esté siempre a la vanguardia.
+                    </p>
+                </div>
+                <div class="col-md-1 comment-icon comment-icon-right">
+                    <i class="fa fa-quote-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="team-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <h2 class="title-services title-mobile">
+                Nuestro equipo de Corporate Services
+            </h2>
+            <app-generic-cards [data]="teamCards" [styles]="stylesTeam"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="cards-section">
+    <div class="row text-services">
+        <div class="col-md-12 col-news">
+            <h2 class="title-services mb-5" align="center">
+                Noticias y Artículos
+            </h2>
+            <app-generic-cards [styles]="stylesNews" [data]="newsCards"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="contact-section">
+    <div class="row text-services">
+        <div class="col-md-12 col-contact">
+            <app-generic-contact [text]="contactText"></app-generic-contact>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

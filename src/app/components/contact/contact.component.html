@@ -1,0 +1,24 @@
+<div class="services-principal" id="header-section">
+    <div class="row text-services">
+        <div class="col-md-12" id="title-col">
+            <app-generic-contact [text]="contactText"></app-generic-contact>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="body-section">
+    <div class="row text-services">
+        <div class="col-md-12 col-info" (click)="goBureau()">
+            Ubicados en las instalaciones de Bureau cowork space: Av. Andrés Bello 2325, Piso 9° Providencia Edificio Puente Suecia | Santiago - Chile
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="map-section">
+    <div class="row text-services map">
+        <div class="col-md-12 map-info">
+            <google-map *ngIf="isMapApiLoaded" height="600px" width="100%" [center]="{lat: lat, lng: lng}" [zoom]="15">
+                <map-marker [position]="{lat: lat, lng: lng}" [options]="markerOptions" [title]="title"></map-marker>
+            </google-map>              
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

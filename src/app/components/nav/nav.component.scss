@@ -1,0 +1,291 @@
+.mat-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    display: grid;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.menu-list {
+    text-align: end;
+}
+
+.menu-list a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-right: 2em;
+    font-size: 14px;
+}
+
+.img-icon {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.btn-icon {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.expand-icon:nth-child(2) {
+    order: 1;
+    position: relative;
+    right: 8%;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.submenu {
+    display: none;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    z-index: 1;
+    padding: 1rem 0;
+    text-align: left;
+    background-color: rgb(0 0 0 / 88%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.submenu.show {
+    display: block;
+}
+
+.submenu-content {
+    margin: 1em 1em;
+}
+
+.service-col {
+    padding: 1em 4em;
+    color: #fff;
+    width: 22%;
+}
+
+.service-col-1 {
+    position: relative;
+    bottom: 0.7em;
+    width: 31%;
+}
+
+.service-col h2 {
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 600;
+    color: #C3BFBF;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.btn-service {
+    background-color: unset;
+    color: #F1F1F1;
+    width: 50%;
+    padding: 2%;
+    border-radius: 64px;
+    border: none;
+    display: flex;
+    float: right;
+    justify-content: end;
+    font-weight: 400;
+    font-size: 19px;
+    color: #6F6F6F;
+    &:hover {
+        color: #C3BFBF;
+    }
+}
+
+.service-col .title-services {
+    cursor: unset;
+    font-size: 32px;
+}
+
+.service-col p {
+    font-weight: 400;
+    font-size: 19px;
+    color: #6F6F6F;
+    white-space: normal;
+}
+
+.service-col a {
+    display: block;
+    font-weight: 400;
+    font-size: 19px;
+    color: #6F6F6F;
+    text-decoration: none;
+    margin-right: unset;
+    margin-inline-start: unset;
+}
+
+.service-col a:hover {
+    color: #C3BFBF;
+}
+
+.mobile-version {
+    display: none;
+}
+
+@media (min-width: 1600px) {  
+    .navbar-row {
+        width: 1600px;
+        display: flex;
+        justify-self: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .submenu.show {
+        display: flex;
+        justify-content: center;
+        .submenu-row {
+            width: 1600px;
+            display: flex;
+            justify-content: center;
+            .service-col-1 {
+                padding: 1em 4em 0em 0em !important;
+            }
+            .service-col {
+                width: 25%;
+                padding: 1em 4em 0em 0em;
+            }
+            .service-col-4 {
+                padding: 1em 0em 0em 4em;
+            }
+        }
+    }
+
+    .submenu-content {
+        max-width: 1600px;
+    }
+
+    .outline-example-container {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .mat-toolbar {
+      display: none;
+    }
+    .mobile-version {
+        display: flex;
+        height: 100%;
+        max-height: 75%;
+        width: 100%;
+        #sidenav {
+            z-index: 20;
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            backdrop-filter: blur(10px);
+        
+            .mat-mdc-nav-list {
+                a {
+                    display: flex;
+                    color: #FFFFFF;
+                    text-decoration: none;
+                    margin-right: 1%;
+                    align-items: center;
+        
+                    &.active {
+                        font-weight: bold;
+                    }
+                }
+        
+                .mat-mdc-list-item {
+                    margin-top: 3%;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    top: 1em;
+        
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.1); /* Cambia el fondo al pasar el mouse */
+                    }
+        
+                    mat-icon {
+                        color: #FFFFFF;
+                        margin-right: 8px;
+                    }
+        
+                    span {
+                        color: #FFFFFF;
+                    }
+        
+                    .expand-icon {
+                        margin-left: 2em;
+                        color: #FFFFFF;
+                        position: relative;
+                        top: 0.2em;
+                    }
+                }
+        
+                .sidenav-submenu {
+                    padding-left: 20px; /* Sangría para submenús */
+                    .mat-mdc-list-item {
+                        span {
+                            font-size: 20px;
+                            margin-left: 5%;
+                        }
+                        a {
+                            margin-left: 15%;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .mat-drawer-container {
+            position: initial !important;
+        }
+        .menu-icon {
+            right: 0;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            z-index: 5;
+            position: absolute;
+            border-radius: unset;
+            &.menu-closed {
+                width: 100vw;
+                height: 10vh;
+                .img-icon {
+                    width: 50vw;
+                    left: 3%;
+                    position: absolute;
+                }
+                .mat-icon {
+                    font-size: 43px;
+                    right: 3%;
+                    position: absolute;
+                    width: 10vw;
+                    height: 5vh;
+                }
+            }
+            .mat-icon {
+                font-size: 30px;
+            }
+        }
+    }
+    .mat-toolbar-single-row {
+        justify-content: right;
+    }    
+}
+  

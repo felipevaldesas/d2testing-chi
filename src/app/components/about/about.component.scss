@@ -1,0 +1,217 @@
+@import url(./../services/advisory/offices/offices.component.scss);
+#header-section {
+    background-image:  linear-gradient(to top, #101010 5%, transparent), 
+                        url('/assets/images/background/background_about_us.jpg');
+    .text-services {
+        .col-title-about {
+            margin-top: 1% !important;
+            h1 {
+                font-style: italic;
+                font-size: 28px;            
+            }
+        }
+        #title-col img {
+            width: 65%;
+        }
+    }
+}
+#cards-section {
+    & .text-services {
+        & .col-md-12 {
+            margin-top: 3em;
+            .description-title {
+                font-style: unset;
+                text-align: left;
+                display: flex;
+                justify-content: center;
+            }
+            .row-comment {
+                margin-top: 10%;
+                margin-bottom: 10%;
+                font-size: 33px;
+                font-style: italic;
+                font-weight: 100;
+            }
+            h2 {
+                text-align: left;
+                margin-bottom: 1em;
+            }
+            .title-office {
+                text-align: center;
+            }
+        }
+        & .office-col {
+            text-align: center;
+        }
+        & .founder-col {
+            margin-bottom: 15em;
+        }
+    }
+}
+#timeline-section {
+    position: relative;
+    padding: 50px 0;
+    background-color: #101010;
+    text-align: center;
+  
+    h2 {
+      font-size: 36px;
+      color: white;
+      margin-bottom: 40px;
+    }
+  
+    .timeline {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 3px;
+            background: white;
+        }
+    }
+  
+    .timeline-item {
+        position: relative;
+        margin: 20px 0;
+        width: 50%;
+        box-sizing: border-box;
+    
+        &.left {
+            left: 25%;
+            text-align: right;
+    
+            .timeline-content {
+                margin-right: calc(50% + 30px);
+            }
+    
+            .timeline-icon {
+                right: calc(50% - 30px);
+            }
+        }
+    
+        &.right {
+            left: 25%;
+            text-align: left;
+    
+            .timeline-content {
+                margin-left: calc(50% + 30px);
+            }
+    
+            .timeline-icon {
+                left: calc(50% - 30px);
+            }
+        }
+    }
+  
+    .timeline-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60px;
+        height: 60px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
+        span {
+            font-size: 32px;
+            color: #101010;
+        }
+
+        img {
+            width: 45px;
+            color: #101010;
+        }
+    }
+  
+    .timeline-content {
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+        position: relative;
+        h3 {
+            font-size: 32px;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .services-principal {
+        display: block;
+    }
+    #header-section {
+        height: 560px !important;
+        .text-services {
+            height: 50vh;
+            .col-title-about  {
+                margin-top: 40% !important;
+            }   
+            #title-col img {
+                width: 100%;
+            }
+        }
+    }    
+    #cards-section {
+        .row-founder {
+            h2 {
+                margin-bottom: unset !important;
+            }
+        }
+        .text-services .col-md-12{
+            margin-top: unset !important;
+            .img-country {
+                width: inherit;
+            }
+        }
+        #col-comment {
+            margin-top: 6em !important;
+            margin-bottom: 8em;
+        }
+    }
+    .col-comment {
+        .col-md-10 {
+            padding: 0em 5em;
+        }
+        .comment-icon-left {
+            bottom: 1.5em !important;
+            left: unset !important;
+            right: 3em;
+        }
+        .comment-icon-right {
+            top: unset!important;
+            right: unset !important;
+            left: 3em;
+        }
+    }
+    #timeline-section {
+        .timeline-item {
+            width: 100%;        
+            &.left {
+                left: 0%;
+            }
+        
+            &.right {
+                left: 0%;
+            }
+        }
+        .timeline-content {
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+  

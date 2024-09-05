@@ -1,0 +1,198 @@
+@import url(./../../services/services.component.scss);
+#title-col {
+    font-style: italic;
+    margin-top: 10em !important;
+    position: relative;
+}
+#header-section {
+    background-image:  linear-gradient(to top, #101010 5%, transparent), 
+                        url('/assets/images/background/background_office.jpg');
+    height: 50vw;    
+    .text-services {
+        height: 85vh;
+    }
+    .title-services {
+        font-size: 61px;
+        margin-bottom: 10%;
+        bottom: unset;
+        .highlighted {
+            color: #ffd966;
+        }
+    }
+}
+#cards-section {
+    .text-services {
+        .col-md-12 { 
+            text-align: left;      
+            margin-top: 7em;
+            .title-services {
+                margin-bottom: 0.3em;
+                font-size: 36px;   
+            }
+            .subtitle-services {
+                font-weight: unset;
+                font-size: 24px;   
+            }
+            .description-title {
+                font-style: unset;
+                font-size: 20px;
+                margin-top: 1em;
+                margin-bottom: 4em;
+            }
+            .comment-icon {
+                font-size: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+            }
+            .comment-icon-left {
+                bottom: 2.3em;
+                left: 0.5em;
+            }
+            .comment-icon-right {
+                top: 0.5em;
+                right: 0.5em;
+            }
+            .comment-title {
+                font-style: italic;
+                text-align: center;
+                font-size: 27px;
+                margin-bottom: 3em;
+                font-weight: 100;
+            }
+        }
+        .office-col {
+            margin-top: 2em;
+            margin-bottom: 4em ;
+        }
+    }
+}
+#our-section {
+    background-image:   linear-gradient(to top, #101010 1%, transparent), 
+                        linear-gradient(to bottom, #101010 1%, transparent), 
+                        url('/assets/images/background/why-us/why_office.jpg');
+    .text-services {
+        .col-md-12 {
+            margin-top: 5em;
+            margin-bottom: 5em;
+            text-align: left;   
+            .title-services {
+                margin-bottom: 0.3em;
+                font-size: 36px;   
+            }
+            .subtitle-services {
+                font-weight: unset;
+                font-size: 24px;   
+            }
+            .description-title {
+                font-style: unset;
+                font-size: 20px;
+                color: #E6E6E6;
+                margin-top: 1em;
+                margin-bottom: 4em;
+            }
+        }
+        .office-col {
+            margin-top: 2em;
+        }
+    }
+}
+#work-section {
+    .text-services {
+        .col-md-12 {
+            margin-top: 10em;
+            margin-bottom: 2em;
+            text-align: left;   
+            .title-services {
+                margin-bottom: 0.3em;
+                font-size: 36px;   
+            }
+            .subtitle-services {
+                font-weight: unset;
+                font-size: 24px;   
+            }
+            .description-title {
+                font-style: unset;
+                font-size: 20px;
+                color: #E6E6E6;
+                margin-top: 1em;
+                margin-bottom: 4em;
+            }
+        }
+    }
+}
+
+#why-us-section {
+    .text-services {
+        max-width: none;
+        width: 100%;
+    }
+}
+#team-section {
+    .text-services {
+        .col-md-12 {    
+            margin-bottom: 10em;
+            .title-services {
+                margin-top: 7em;
+                margin-bottom: 2em;
+            }
+        }
+    }
+}
+#testimonies-section {
+    .text-services {
+        max-width: none;
+        width: 100%;
+    }
+}
+#contact-section {
+    background-image:   linear-gradient(to top, #101010 5%, transparent), 
+                        linear-gradient(to bottom, #101010 5%, transparent), 
+                        url('/assets/images/background/background_contact.jpg');
+    .text-services {
+        width: 100%;
+        text-align: left;
+    }
+}
+@media (max-width: 768px) {
+    #header-section {
+        height: 55vw;   
+        .text-services {
+            height: 85vh;
+        }
+        .title-services {
+            margin-bottom: unset;
+        }
+    }   
+    #cards-section {
+        .office-col {
+            padding: 1.5em;
+            margin-bottom: 1em !important;
+        }
+    }
+    #our-section {
+        .text-services .col-md-12 {
+            margin-top: 2em;
+            margin-bottom: unset;
+            padding: 1.5em;
+        }
+    }
+    #title-col {
+        margin-top: unset !important;
+    }
+    #work-section {
+        .text-services .col-md-12 {
+            margin-top: 5em;
+            text-align: center;
+        }
+    }
+    #team-section {
+        .title-services {
+            margin-top: 1em !important;
+        }
+        .text-services .col-md-12 {
+            margin-bottom: unset;
+        }
+    }
+}

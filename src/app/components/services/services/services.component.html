@@ -1,0 +1,97 @@
+<div class="services-principal" id="header-section">
+    <div class="row text-services">
+        <div class="col-section" id="services-title-col">
+            <h1> Servicios </h1>
+        </div>
+        <div class="col-section d-none d-md-flex" id="icon-col">
+            <div class="icon-list" *ngFor="let icon of icons">
+                <a [routerLink]="icon.link" class="icon-link">
+                    <div class="icon-container">
+                        <img [src]="icon.imgUrl" [alt]="icon.alt" class="service-icon">
+                        <div class="icon-text">{{ icon.alt }}</div>
+                    </div>
+                </a>
+            </div>
+        </div>          
+        <div class="col-section">
+            <h3 class="title-services" 
+                    data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500"
+            >
+                Servicios de asesoramiento, transacción y gestión de activos inmobiliarios comerciales
+            </h3>
+            <div class="contact-phone">
+                <a href="https://api.whatsapp.com/send?phone=56994763258" target="_blank" class="whatsapp-button">
+                    <i class="fa fa-whatsapp social-icon"></i> Agendar una asesoría
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="services-principal">
+    <div class="row text-services">
+        <div class="col-section" id="first-col-section">
+            <h2 class="title-services">
+                Advisory & Transactions Services
+            </h2>
+            <h3 class="subtitle-services">
+                Servicios de Asesoramiento & Transacciones
+            </h3>
+            <p class="description-title">
+                Combinando análisis de mercado con estudios de viabilidad, En Diagonal2 <span class="highlighted"> gestionamos operaciones de arrendamiento, 
+                venta, reubicación y expansión </span> para instalaciones industriales, almacenes y centros de distribución en toda la región.
+            </p>
+            <app-generic-cards [styles]="styles" [data]="advisoryCards"></app-generic-cards>
+        </div>
+        <div class="col-section">
+            <h2 class="title-services">
+                Management Services
+            </h2>
+            <h3 class="subtitle-services">
+                Servicios de Gestión
+            </h3>
+            <p class="description-title">
+                Nos dedicamos a diseñar soluciones personalizadas, enfocándonos en satisfacción, riesgos, sostenibilidad y costos.
+                Gestionamos activos inmobiliarios, <span class="highlighted"> optimizando ocupación e ingresos, y minimizando gastos, </span> asegurando un servicio profesional y exhaustivo.
+            </p>
+            <app-generic-cards [styles]="styles" [data]="managementCards"></app-generic-cards>
+        </div>
+        <div class="col-section">
+            <h2 class="title-services">
+                Consulting & Strategy
+            </h2>
+            <h3 class="subtitle-services">
+                Consultoría y Estrategia
+            </h3>
+            <p class="description-title">
+                Nuestro recorrido en el <span class="highlighted">  mercado nacional e internacional,  </span> además de la experiencia de nuestros expertos, nos permiten asesorarte e involucrarnos en los procesos 
+                y desafíos inmobiliarios de tu empresa.
+            </p>
+            <app-generic-cards [styles]="styles" [data]="consultingCards"></app-generic-cards>
+        </div>
+        <div class="col-section">
+            <h2 class="title-services">
+                Portal de oficinas, locales, bodegas y suelos
+            </h2>
+            <h3 class="subtitle-services">
+                Encuentra la propiedad que necesitas.
+            </h3>
+            <img class="mw-100" src="assets/images/services/portal_properties.png" alt="">
+            <div class="btn-container">
+                <button class="btn-view" (click)="goProperties()">
+                    <mat-icon>apartment</mat-icon>
+                    Ver propiedades
+                </button>
+            </div>
+        </div>
+    </div>    
+</div>
+<div class="services-principal" id="contact-section">
+    <div class="row text-services">
+        <div class="col-section col-contact">
+            <app-generic-contact [text]="contactText"></app-generic-contact>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

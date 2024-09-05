@@ -1,0 +1,113 @@
+<div class="services-principal" id="header-section">
+    <div class="row text-services">
+        <div class="col-md-12" id="title-col">
+            <h1> 
+                Valoración y Consultoría
+            </h1>
+        </div>
+        <div class="col-md-12">
+            <h3 class="title-services" 
+                    data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500"
+            >
+                Analizamos el mercado para proporcionarte la máxima rentabilidad de tus activos inmobiliarios
+            </h3>
+            <div class="contact-phone">
+                <a href="https://api.whatsapp.com/send?phone=56939538862" target="_blank" class="whatsapp-button">
+                    <i class="fa fa-whatsapp social-icon"></i> Agendar una asesoría
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="cards-section">
+    <div class="row text-services">
+        <div class="col-md-12 office-col">
+            <h2 class="title-services">
+                Valuation & Advisory
+            </h2>
+            <h3 class="subtitle-services">
+                Valoración y consultoría 
+            </h3>
+            <p class="description-title text-light">
+                Nuestra división de Valoración y Consultoría ofrece servicios integrales de
+                tasación y asesoramiento. Nuestra experiencia en dinámicas de mercado y
+                valoración de propiedades informa el asesoramiento estratégico para
+                transacciones inmobiliarias, análisis de inversiones y optimización de carteras.
+                Proporcionamos valoraciones precisas y respaldadas por investigaciones para
+                guiar a los clientes a través de decisiones complejas de propiedades, asegurando
+                precisión y visión estratégica.
+            </p>
+            <h2 class="title-services mb-5">
+                Servicios para propietarios y usuarios
+            </h2>
+            <app-generic-cards [styles]="stylesCorporate" [data]="corporateCards"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="why-us-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <app-generic-why-us [data]="whyUsData"></app-generic-why-us>
+        </div>
+    </div>    
+</div>
+<div class="services-principal" id="work-section">
+    <div class="row text-services">   
+        <div class="col-md-12">
+            <h2 class="title-services">
+                Tasación inmobiliaria
+            </h2>
+            <app-generic-cards [styles]="styleServicesCards" [data]="assistanceCards"></app-generic-cards>
+        </div>  
+        <div class="col-md-12">
+            <h2 class="title-services">
+                Análisis de contribuciones y sobretasas
+            </h2>
+            <app-generic-cards [styles]="styleProjectServicesCards" [data]="projectCards"></app-generic-cards>
+        </div>  
+        <div class="col-md-12">
+            <h2 class="title-services">
+                Asesoría Financiera
+            </h2>
+            <app-generic-cards [styles]="styleServicesCards" [data]="financeCards"></app-generic-cards>
+        </div>     
+        <div class="col-md-12">
+            <h2 class="title-services">
+                Due Diligence Inmobiliaria
+            </h2>
+            <app-generic-cards [styles]="styleServicesCards" [data]="diligenceCards"></app-generic-cards>
+        </div>    
+        <div class="col-md-12">
+            <h2 class="title-services">
+                Auditoría de Propiedades
+            </h2>
+            <app-generic-cards [styles]="styleServicesCards" [data]="propertyCards"></app-generic-cards>
+        </div>    
+        <div class="col-md-12">
+            <h2 class="title-services">
+                Análisis de Viabilidad
+            </h2>
+            <app-generic-cards [styles]="styleServicesCards" [data]="viabilityCards"></app-generic-cards>
+        </div>         
+    </div>
+</div>
+<div class="services-principal" id="cards-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <h2 class="title-services mb-5" align="center">
+                Noticias y Artículos
+            </h2>
+            <app-generic-cards [styles]="stylesNews" [data]="newsCards"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="contact-section">
+    <div class="row text-services">
+        <div class="col-md-12 col-contact">
+            <app-generic-contact [text]="contactText"></app-generic-contact>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

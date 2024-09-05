@@ -1,0 +1,104 @@
+<div class="services-principal" id="header-section">
+    <div class="row text-services">
+        <div class="col-md-12" id="title-col">
+            <h1> 
+                Asset Management
+            </h1>
+        </div>
+        <div class="col-md-12">
+            <h3 class="title-services" 
+                    data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500"
+            >
+                “Administramos tus contratos de arriendo,
+                <span class="highlighted"> maximizando la rentabilidad y valor </span>
+                de tus activos inmobiliarios”
+            </h3>
+            <div class="contact-phone">
+                <a href="https://api.whatsapp.com/send?phone=56932642876" target="_blank" class="whatsapp-button">
+                    <i class="fa fa-whatsapp social-icon"></i> Agendar una asesoría
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="cards-section">
+    <div class="row text-services">
+        <div class="col-md-12 office-col">
+            <h2 class="title-services">
+                Asset Management
+            </h2>
+            <h3 class="subtitle-services">
+                Gestión de activos inmobiliarios
+            </h3>
+            <p class="description-title text-light">
+                Representamos a propietarios y gestionamos sus activos inmobiliarios comerciales, ocupando las  
+                propiedades con los arrendatarios adecuados, asegurando una gestión integral por medio de la comercialización, 
+                administración, evaluación, marketing, finanzas y TI de sus activos.
+            </p>
+            <div class="row mt-3 mb-5">
+                <div class="col-md-1 comment-icon comment-icon-left">
+                    <i class="fa fa-quote-left"></i>
+                </div>
+                <div class="col-md-10">
+                    <p class="comment-title text-light">
+                        Entendemos que la mejor estrategia es conocer nuestro rubro, investigar el mercado, ofrecer propuestas de valor y satisfacer las necesidades de nuestros clientes.
+                    </p>
+                </div>
+                <div class="col-md-1 comment-icon comment-icon-right">
+                    <i class="fa fa-quote-right"></i>
+                </div>
+            </div>
+            <h2 class="title-services mb-5">
+                Servicios para propietarios
+            </h2>
+            <app-generic-cards [styles]="stylesAsset" [data]="assetCards"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="our-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <h2 class="title-services">
+                Beneficios para nuestros clientes
+            </h2>
+            <app-generic-cards [styles]="stylesBenefitsCards" [data]="benefitsCards"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="why-us-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <app-generic-why-us [data]="whyUsData"></app-generic-why-us>
+        </div>
+    </div>    
+</div>
+<div class="services-principal" id="team-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <h2 class="title-services">
+                Nuestro equipo de Asset management
+            </h2>
+            <app-generic-cards [data]="teamCards" [styles]="stylesTeam"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="cards-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <h2 class="title-services mb-5" align="center">
+                Noticias y Artículos
+            </h2>
+            <app-generic-cards [styles]="stylesNews" [data]="newsCards"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="contact-section">
+    <div class="row text-services">
+        <div class="col-md-12 col-contact">
+            <app-generic-contact [text]="contactText"></app-generic-contact>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

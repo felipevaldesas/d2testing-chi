@@ -1,0 +1,222 @@
+@import url(./../about/about.component.scss);
+#header-section {
+    background-image:  linear-gradient(to top, #101010 5%, transparent), 
+                        url('/assets/images/background/background_properties_up.jpg');
+    height: 100%;
+    #title-col {
+        padding: unset;
+        img {
+            width: 90px;
+            position: relative;
+            bottom: 3em;
+        }
+    }
+    .text-services {
+        text-align: left;
+        .title-services {
+            bottom: unset;
+        }
+    }
+    .main-search {
+        .search-form {
+            margin-inline-start: 1.5%;
+            margin-inline-end: 1.5%;
+            .box {
+                border: 0.5em solid transparent;
+                display: flex;
+                justify-content: center;            
+                input {
+                    height: 2em;
+                    background-color: transparent;
+                    border-radius: 1em;
+                    color: #DCDCDC;
+                    border: 2px solid #DCDCDC;
+                    &::placeholder {
+                        color:#DCDCDC;
+                    }
+                }
+                label {
+                    font-weight: 500;
+                    font-size: 14px;
+                }
+                input[type="date" i]::-webkit-calendar-picker-indicator {
+                    margin-inline-end: 4% !important;
+                }
+                ::-webkit-inner-spin-button {
+                    margin-inline-end: 2% !important;
+                }
+                ::ng-deep.mat-mdc-form-field{
+                    .mat-mdc-form-field.mat-focused .mat-mdc-form-field-focus-overlay {
+                        opacity: 0;
+                    }
+                    .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+                        align-items: center;
+                        border: 2px solid #DCDCDC;
+                        height: 2em;
+                        background-color: transparent;
+                        border-radius: 1em;
+                    }
+                    .mat-mdc-select-placeholder {
+                        color: #DCDCDC;
+                    }
+                    .mat-mdc-select-arrow {
+                        color: #DCDCDC;
+                    } 
+                    .mat-mdc-form-field-subscript-wrapper {
+                        display: none;
+                    }
+                    ::ng-deep.mdc-line-ripple::before {
+                        border: none;
+                    }
+                    ::ng-deep.mdc-line-ripple::after {
+                        border: none;
+                    }
+                }
+                .btn-submit {
+                    background-color: #DCDCDC;
+                    width: 50%;
+                    color: #101010;
+                    display: flex;
+                    justify-self: center;
+                    border-radius: 2em;
+                }
+            }
+            .box-filter {
+                display: flex;
+                justify-content: end;
+                .btn-filter {
+                    box-shadow: unset;
+                    color: #DCDCDC;
+                    background: unset;
+                    border: unset;
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                }
+            }
+            .box-finance {
+                position: relative;
+                right: 2em;
+            }
+        }
+        .property-types {
+            display: flex;
+            justify-content: center;
+            gap: 5em;
+            margin-top: 6%;
+            p {
+                font-size: 20px;
+                cursor: pointer;
+                transition: color 0.3s;
+                display: flex;
+                align-items: center;
+                gap: 0.5em;
+                &:hover {
+                    color: #FFD966;
+                }
+                .matt-icon {
+                    font-size: 25px;
+                }
+                .matt-img {
+                    width: 25px;
+                }
+            }
+        }
+    }
+    .most-searched {
+        margin-top: 10em;      
+        .title-searched {
+            font-size: 36px;
+            margin-bottom: 2em;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            .icon-title {
+                font-size: 36px;                
+            }
+        }
+      
+        .search-links {
+          display: flex;
+          justify-content: space-around;
+          gap: 4em;
+          flex-wrap: wrap;
+      
+          .category {
+            flex: 1 1 200px; /* Flexibilidad en la distribución */
+            margin: 1em 0;
+      
+            h3 {
+              font-size: 19px;
+              margin-bottom: 1em;
+              font-weight: 700;
+            }
+      
+            ul {
+              list-style: none;
+              padding: 0;
+              margin: 0;
+      
+              li {
+                font-size: 15px;
+                margin-bottom: 0.5em;
+                cursor: pointer;
+                transition: color 0.3s;
+      
+                &:hover {
+                  color: #FFD966;
+                }
+              }
+            }
+          }
+        }
+    }
+}
+#title-col {
+    padding: 6em 0em 0em 0em;
+    top: unset;
+}
+.info-col {
+    position: relative;
+    top: 2em;
+}
+#desc-col {
+    height: 10em;
+}
+
+@media (max-width: 768px) {
+    #header-section {
+        padding: 5em 1em;
+        height: 100% !important;
+        .text-services {
+            height: 100vh !important;
+        }
+        .title-services {
+            bottom: 2em !important;
+        }
+        .main-search {
+            .search-form {
+                margin-inline-start: unset;
+                margin-inline-end: unset;
+                .box {
+                    display: unset;
+                    ::ng-deep.mat-mdc-form-field{
+                        width: 100%;
+                    }
+                }
+                .box-finance {
+                    position: unset;
+                }
+            }
+        }
+        .most-searched .search-links .category {
+            flex: unset;
+            margin: unset;
+            width: 100%;
+        }
+    }
+    #title-col {
+        top: unset !important;
+    }
+}

@@ -1,0 +1,244 @@
+.services-principal {
+    background-color: #101010;
+    display: flex;
+    justify-content: center;
+
+    .col-section {
+        margin-top: 7em;
+        margin-bottom: 7em;    
+    }
+
+    #icon-col {
+        display: flex;
+        gap: 10px;
+    
+        .icon-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    
+        .icon-link {
+            text-decoration: none; /* Elimina la decoración del enlace */
+            color: inherit; /* Mantiene el color del texto original */
+        }
+    
+        .icon-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    
+        .service-icon {
+            width: 35px;
+        }
+    
+        .icon-text {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #F3F3F3;
+            line-height: 1.2em;
+            word-wrap: break-word;
+            max-width: 100px;
+        }
+    }    
+
+    .text-services {
+        color: #F3F3F3;
+        max-width: 1083px;
+        text-align: center;
+
+        .title-services {
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .subtitle-services {
+            font-size: 22px;
+            font-style: italic;
+            font-weight: 700;
+            color: #BDBDBD;
+        }    
+
+        .description-title {
+            font-style: italic;
+            font-size: 18px;
+            color: #BDBDBD;
+            margin-top: 35px;
+            margin-bottom: 35px;
+
+            .highlighted {
+                color: #ffd966;
+            }
+        }
+        .contact-phone {
+            width: 100%;
+            .whatsapp-button {
+                background: #23D567;
+                border-radius: 30px;
+                font-weight: 600;
+                font-size: 14px;
+                color: #111C20;
+                text-decoration: unset;
+                padding: 0.5em;
+                display: inline-flex;
+                width: 25%;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                .social-icon {
+                    font-size: 25px;
+                    margin-inline-end: 1%;
+                }
+            }
+        }
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 2em;
+        .btn-view {
+            background-color: #185CFF;
+            color: #F1F1F1;
+            width: 28%;
+            padding: 0.6em;
+            border-radius: 64px;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+}
+
+#header-section {
+    position: relative;
+    background-image:  linear-gradient(to top, #101010 5%, transparent), 
+                        url('/assets/images/background/background_services.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vw;
+    #services-title-col {
+        margin-top: 6em;
+        margin-bottom: 0em;
+        height: 0em;
+        h1 {
+            font-size: 30px;
+        }
+    }
+    #title-col {
+        margin-top: 6em;
+        margin-bottom: 0em;
+        height: 0em;
+        h1 {
+            font-size: 30px;
+        }
+    }
+    #icon-col {
+        height: 0em;
+    }
+    .col-section {
+        margin-top: 0em;
+    }
+    .title-services {
+        font-size: 70px;
+        font-weight: 500;
+        position: relative;
+        bottom: 1.5em;
+    }
+}
+
+#contact-section {
+    background-image:   linear-gradient(to top, #101010 5%, transparent), 
+                        linear-gradient(to bottom, #101010 5%, transparent), 
+                        url('/assets/images/background/background_contact.jpg');
+    .text-services {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+::ng-deep .text-panel {
+    .title {
+        font-size: 20px;
+        font-weight: 700;
+        height: 4em;
+        text-align: center;
+        align-content: center;
+    }
+
+    .description {
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 768px) {
+    #header-section {
+        height: 60vh !important;
+        .text-services {
+            height: 55vh !important;
+            padding: 2em;
+        }
+        #services-title-col {
+            margin-top: 3em;
+            h1 {
+                font-size: 17px;
+            }
+        }
+        .col-section {
+            padding: 0em 1em;
+            margin-top: 8em;
+        }
+        #title-col {
+            top: 3em;
+            h1 {
+                font-size: 17px;
+            }
+        }
+        .title-services {
+            font-size: 25px !important;
+            top: 1em;
+            margin-top: unset  !important;
+            margin-bottom: unset !important;
+        }
+    }
+    .services-principal {
+        #first-col-section {
+            margin-top: 10em;
+        }
+        .btn-container {
+            top: 65vw;
+            .btn-view {
+                width: 70%;
+            }
+        }
+    }
+    #contact-section {
+        .col-contact {
+            padding: unset;
+        }
+    }
+    .contact-phone {
+        position: relative;
+        top: 5em;
+        .whatsapp-button {
+            font-weight: 500 !important;
+            font-size: 20px !important;
+            height: 2em;
+            width: 100% !important;
+            position: relative;
+            top: 1em;
+            .social-icon {
+                font-size: 24px !important;
+            }
+        }
+    }
+}

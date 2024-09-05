@@ -1,0 +1,44 @@
+<div class="row text-home">
+    <div class="col-page">
+        <ngb-carousel *ngIf="data.length > 0 && extendedData.length === 0" [interval]="5000" [pauseOnHover]="!isMobile" [wrap]="true">
+            <ng-template ngbSlide *ngFor="let pair of getTestimonyPairs(); trackBy: trackByTestimonyPair">
+                <div class="d-flex justify-content-center">
+                    <mat-card class="mat-card-profiles" *ngFor="let testimony of pair">
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10" align="center">
+                                <div class="text-panel">
+                                    <img class="panel-icon" [src]="testimony.icon" alt="Icono de servicio">
+                                    <p class="testimony">{{ testimony.text }}</p>
+                                    <p class="name">{{ testimony.name }}<br><b>{{ testimony.title }}</b></p>
+                                </div>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                    </mat-card>
+                </div>
+            </ng-template>
+        </ngb-carousel>        
+        <ngb-carousel *ngIf="extendedData.length > 0 && data.length === 0" [interval]="5000" [pauseOnHover]="!isMobile" [wrap]="true">
+            <ng-template ngbSlide *ngFor="let slide of extendedData">
+                <div class="slide-content">
+                    <img [src]="slide.iconUrl" alt="Icono del slide" class="icon">
+                    <h3 class="subtitle"> {{ slide.subtitle }} </h3>
+                    <p class="description"> {{ slide.description }} </p>
+                    <h2 class="title"> {{ slide.title }} </h2>
+                    <div class="d-flex justify-content-center flex-wrap">
+                        <div *ngFor="let row of getCardLayout(slide.cards || [])" class="row d-flex justify-content-center w-100">
+                            <mat-card   [ngClass]="{'extended-card' : extendedData.length > 0 ? extendedData.length > 0 : undefined}"
+                                        class="mat-card-profiles" *ngFor="let card of row">
+                                <div class="text-panel">
+                                    <span *ngIf="card.icon" class="material-symbols-outlined icon-extended" alt="Icono de servicio">{{ card.icon }}</span>
+                                    <p class="testimony" [innerHTML]="card.text"></p>
+                                </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </ngb-carousel>          
+    </div>
+</div>  

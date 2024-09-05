@@ -1,0 +1,76 @@
+@import url(./../../advisory/offices/offices.component.scss);
+#header-section {
+    background-image:  linear-gradient(to top, #101010 5%, transparent), 
+                        url('/assets/images/background/background_corporate.jpg');
+    .title-services {
+        margin-top: 1em;
+    }
+}
+#cards-section {
+    & .text-services {
+        & .col-md-12 {
+            .description-title {
+                margin-bottom: 6em;
+            }
+        }
+    }
+}
+#our-section {
+    background-image:   linear-gradient(to top, #101010 1%, transparent), 
+                        linear-gradient(to bottom, #101010 1%, transparent), 
+                        url('/assets/images/background/why-us/why_corporate.jpg');
+}
+#work-section {
+    & .text-services {
+        & .col-md-12 {
+            .title-services {
+                margin-bottom: 1em;
+            }
+        }
+    }
+}
+
+#team-section {
+    & .text-services {
+        & .col-md-12 {
+            margin-bottom: 3em;
+            .title-services {
+                margin-top: 3em;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .services-principal .text-services .col-md-12 .title-mobile {
+        text-align: center;
+    }
+    #our-section {
+        .col-md-12 {
+            padding: 0em 2.5em;
+        }
+    }
+    .service-comment {
+        padding: 0em 1em 5em 1em;
+        .text-services {
+            width: 100%;
+            .col-md-12 {
+                .comment-icon-left {
+                    bottom: 1.5em !important;
+                    left: unset !important;
+                    right: 3em;
+                }
+                .comment-icon-right {
+                    top: unset!important;
+                    right: unset !important;
+                    left: 3em;
+                }
+            }
+        }
+    }
+    #cards-section {
+        .col-news {
+            margin-top: unset;
+        }
+    }
+}

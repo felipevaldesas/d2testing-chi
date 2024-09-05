@@ -1,0 +1,77 @@
+.background-up, .background-center, .background-down {
+    background-color: #101010;
+    animation: backgroundFade 3s ease-in-out;
+}
+
+.background-up {
+    background-image:   linear-gradient(to top, #101010 5%, transparent), 
+                        linear-gradient(to bottom, #101010 5%, transparent), 
+                        url('/assets/images/background/background_home.jpg');
+    background-size: cover;
+}
+
+.background-center {
+    position: relative;
+    background-image: url('/assets/images/home/background-system.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 55vw;
+    background-position: center;
+}
+
+.background-contact {
+    background-image:   linear-gradient(to top, #101010 5%, transparent), 
+                        linear-gradient(to bottom, #101010 5%, transparent), 
+                        url('/assets/images/background/background_contact.jpg');
+}
+
+@keyframes backgroundFade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.background-down {
+    background-color: #1C1C1D;
+}
+
+.app-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.app-content {
+    max-width: 1280px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.app-content-header:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .app-content {
+        max-width: 768px;
+    }
+    .background-up {
+        background-image: unset;
+        background-color: #101010;
+    }
+    .background-center {
+        height: 113vw;
+        background-size: contain;
+        padding: 1em;
+    }
+}
+
+@media (min-width: 1600px) {
+    .app-content {
+        max-width: 1280px;
+    }
+}

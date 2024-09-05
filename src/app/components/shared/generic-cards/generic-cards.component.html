@@ -1,0 +1,128 @@
+<div class="horizontal-scroll">
+    <div class="row flex-row data-card"
+        [ngStyle]="{
+            'gap': styles?.colGap ? styles?.colGap + ' !important' : (data.length === 3 ? '50px' : '15px'),
+            'justify-content': isImageOnly(data) ? 'center' : null
+        }"
+        [ngClass]="{
+            'team-card': isImageOnly(data),
+            'news-card': isNewsCard(data),
+            'mini-card': styles?.miniCard,
+            'our-card': styles?.ourCard,
+            'workflow-card': styles?.workflowCard,
+            'process-card': styles?.processCard
+        }">
+        <div *ngFor="let card of data; let i = index" 
+            class="col-md-4 card" 
+            [style.--index]="i"
+            [ngStyle]="{
+                'background-image': card.text ? 'url(' + card.text.backgroundImage + ')': 'unset', 
+                'background-color': card.text ? card.text.backgroundColor : null, 
+                'box-shadow': (styles?.teamCard || styles?.processCard) ? 'unset' : '0px 12px 30px rgba(0, 0, 0, 0.19)',
+                'border': styles?.noneBorder ? 'unset': null,
+                'width': styles?.colWidth, 
+                'height': styles?.colHeight, 
+                'padding': styles?.colPadding
+            }"
+            [ngClass]="{
+                'text-dark': card.text ? (card.text.textDark === true || (card.text.textDark === undefined && i % 2 !== 0)) : undefined, 
+                'text-light': card.text ? (card.text.textDark === false || (card.text.textDark === undefined && i % 2 === 0)) : undefined,
+                'workflow-card-special': styles?.workflowCard ? styles?.workflowCard && (i === 0 || i === data.length - 1) : undefined
+            }">
+            <span *ngIf="styles?.workflowCard" class="card-index">
+               {{i + 1}}
+            </span>
+            <div class="text-panel"
+                [ngClass]="{
+                    'workflow-panel': styles?.workflowCard ? (styles?.workflowCard && card?.text?.textDark === true) : undefined,
+                    'team-panel': styles?.teamCard
+                }">
+                
+                <img *ngIf="card.imgUrl"
+                    class="icon-url" 
+                    [src]="card.imgUrl"
+                    [ngStyle]="{
+                        'max-width': styles?.imgMaxWidth
+                    }" >
+
+                <h3 *ngIf="card.newsInfo && card.newsInfo.section" 
+                    class="section-title">
+                    {{ card.newsInfo.section }}
+                </h3>
+
+                <ng-container *ngIf="card.text">
+                    <span *ngIf="card.text.iconName" 
+                        class="material-symbols-outlined icon-symbol"
+                        [ngStyle]="{ 
+                            'font-size': styles?.textIcon,
+                            'color': styles?.processCard && i === data.length - 1 ? '#0F9341' : styles?.colorIcon
+                        }">
+                        {{card.text.iconName}} 
+                    </span>
+                    <img *ngIf="card.text.iconUrl" 
+                        class="icon-url" 
+                        [src]="card.text.iconUrl"
+                        [ngStyle]="{
+                            'width': styles?.imgWidth,
+                            'border-radius': styles?.imgWidth ? '10px' : null
+                        }" >
+                </ng-container>
+
+                <ng-container *ngIf="card.newsInfo">
+                    <h3 class="section-title mt-1">
+                        {{ card.newsInfo.date }}
+                    </h3>                    
+                </ng-container>
+
+                <ng-container *ngIf="card.text">
+                    <h3 *ngIf="card.text.title" [innerHTML]="card.text.title" class="title" 
+                        [ngStyle]="{
+                            'color': styles?.processCard && i === data.length - 1 ? '#0F9341' : (card.text.listDesc ? '#FFD966' : null),
+                            'font-size': styles?.textTitle,
+                            'width': styles?.colTitleWidth
+                        }"></h3>
+                    <ol *ngIf="card.text.listDesc" class="list">
+                        <li *ngFor="let item of card.text.listDesc">
+                            {{item.text}}
+                        </li>
+                    </ol>
+                    <p *ngIf="card.text.description" [innerHTML]="card.text.description" class="description" 
+                        [ngStyle]="{
+                            'font-size': styles?.textDesc,
+                            'align-content': styles?.heightDesc ? 'center' : null,
+                            'height': styles?.heightDesc
+                        }"></p>
+
+                    <div class="btn-container-card" *ngIf="card.text?.url">
+                        <a class="btn-view" [routerLink]="card.text.url"> Más información </a>
+                    </div>                    
+                </ng-container>
+
+                <ng-container *ngIf="card.newsInfo">
+                    <div class="row row-user-info" *ngIf="card.newsInfo.userInfo">
+                        <div class="col-md-2">
+                            <img class="icon" [src]="card.newsInfo.userInfo.iconUrl" alt="">                            
+                        </div>
+                        <div class="col-md-10">
+                            <h3 class="name">{{card.newsInfo.userInfo.name}}</h3>
+                            <h3 class="role">{{card.newsInfo.userInfo.role}}</h3>
+                        </div>
+                    </div>
+                    <div class="row btn-container-news" *ngIf="card.newsInfo?.url">
+                        <a class="btn-view" [routerLink]="card.newsInfo.url"> Ver más 
+                            <span class="material-symbols-outlined"> chevron_right </span>
+                        </a>
+                    </div>   
+                </ng-container>
+
+                <ng-container *ngIf="card.socialMedia">
+                    <div class="social-col d-flex">
+                        <a *ngFor="let social of card.socialMedia" class="social-icon" [href]="social.redirectUrl" target="_blank" [attr.aria-label]="'Contactar a ' + card.text?.title + ' por ' + social.iconName">
+                            <i [class]="'fa ' + social.iconName"></i>
+                        </a>
+                    </div>
+                </ng-container>                
+            </div>
+        </div>
+    </div>
+</div>

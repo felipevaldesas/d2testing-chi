@@ -1,0 +1,31 @@
+<div class="banner-container">
+    <div class="banner">
+        <div class="banner-slide" *ngFor="let image of images; let i = index" [ngClass]="{'active': currentIndex === i}">
+            <img [src]="image.src" [alt]="image.alt">
+            <div class="overlay">
+                <ng-container *ngIf="splitText(image.text).highlighted; else normalText">
+                    <h3>
+                        {{ splitText(image.text).before }}
+                        <span class="highlighted">{{ splitText(image.text).highlighted }}</span>
+                        {{ splitText(image.text).after }}
+                    </h3>
+                </ng-container>
+                <ng-template #normalText>
+                    <h3>{{ image.text }}</h3>
+                </ng-template>
+                <div class="contact-phone">
+                    <a href="https://api.whatsapp.com/send?phone=56994763258" target="_blank" class="whatsapp-button">
+                        <i class="fa fa-whatsapp social-icon"></i> Agendar una asesoría
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="description">
+        <h1>Especialistas en la gestión de activos inmobiliarios</h1>
+        <p>
+            Servicios e inversiones inmobiliarias comerciales, 
+            con experiencias y datos, creamos soluciones personalizadas para cada cliente.
+        </p>
+    </div>
+</div>  

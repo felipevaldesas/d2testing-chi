@@ -1,0 +1,131 @@
+<mat-toolbar class="desktop-version">
+    <div class="row navbar-row">
+        <div class="col-6 col-md-6 d-none d-md-block">
+            <button mat-button class="menu-icon text-open-sans" (click)="navigateHome()">
+                <img class="img-icon" src="assets/icons/navbar/diagonal2-real-estate-partner-logo-nav.svg" alt="Logo">
+            </button>
+        </div>
+        <div class="col-6 col-md-6 menu-list d-none d-md-block">
+            <div class="dropdown" (mouseenter)="showSubmenu()">
+                <a mat-button class="text-open-sans btn-icon" routerLink="/servicios" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    Servicios <mat-icon class="expand-icon">expand_more</mat-icon>
+                </a>
+                <div class="submenu" [class.show]="submenuVisible" (mouseleave)="hideSubmenu()">
+                    <div class="submenu-content">
+                        <div class="row">
+                            <div class="col-md-3 service-col service-col-1">
+                                <h2 class="title-services">Servicios</h2>
+                                <p>
+                                    Diagonal2 ofrece una amplia gama de servicios especializados, desde asesoramiento de inversión hasta valorización, 
+                                    planificación y gestión inmobiliaria.
+                                </p>
+                                <a mat-button class="btn-service" routerLink="/servicios" routerLinkActive="active">Ver más...</a>
+                            </div>
+                            <div class="col-md-3 service-col">
+                                <h2 mat-button routerLink="/servicios/asesoramiento" routerLinkActive="active">Advisory & Transactions</h2>
+                                <a mat-button class="text-open-sans" routerLink="/servicios/asesoramiento/oficinas" routerLinkActive="active">Office consulting</a>
+                                <a mat-button class="text-open-sans" routerLink="/servicios/asesoramiento/locales-comerciales" routerLinkActive="active">Retail consulting</a>
+                                <a mat-button class="text-open-sans" routerLink="/servicios/asesoramiento/bodegas-industriales" routerLinkActive="active">Industrial consulting</a>
+                                <a mat-button class="text-open-sans" routerLink="/servicios/asesoramiento/suelos" routerLinkActive="active">Land consulting</a>
+                            </div>
+                            <div class="col-md-3 service-col">
+                                <h2 mat-button routerLink="/servicios/gestion" routerLinkActive="active">Management Services</h2>
+                                <a mat-button class="text-open-sans" routerLink="/servicios/gestion/mantenimiento" routerLinkActive="active">Facility management</a>
+                                <a mat-button class="text-open-sans" routerLink="/servicios/gestion/propiedades" routerLinkActive="active">Property management</a>
+                                <a mat-button class="text-open-sans" routerLink="/servicios/gestion/activos" routerLinkActive="active">Asset management</a>
+                                <a mat-button class="text-open-sans" routerLink="/servicios/gestion/proyectos" routerLinkActive="active">Project management</a>
+                            </div>
+                            <div class="col-md-3 service-col service-col-4">
+                                <h2 mat-button routerLink="/servicios/consultoria" routerLinkActive="active">Consulting & Strategy</h2>
+                                <a mat-button class="text-open-sans" routerLink="/servicios/consultoria/investigacion" routerLinkActive="active">Market Research</a>
+                                <a mat-button class="text-open-sans" routerLink="/servicios/consultoria/mercado" routerLinkActive="active">Capital Markets</a>
+                                <a mat-button class="text-open-sans" routerLink="/servicios/consultoria/corporativo" routerLinkActive="active">Corporate Services</a>
+                                <a mat-button class="text-open-sans" routerLink="/servicios/consultoria/valuacion" routerLinkActive="active">Valuation & Advisory</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a mat-button class="text-open-sans" routerLink="/nosotros" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Sobre nosotros</a>
+            <a mat-button class="text-open-sans" routerLink="/propiedades" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Propiedades</a>
+            <a mat-button class="text-open-sans" routerLink="/noticias" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Noticias y artículos</a>
+            <a mat-button class="text-open-sans" routerLink="/contacto" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Contacto</a>            
+        </div>
+    </div>
+</mat-toolbar>
+
+<div class="mobile-version">
+    <button mat-icon-button (click)="toggleSidenav()"
+            class="menu-icon" 
+            [ngClass]="{'menu-closed': !isSidenavOpen}">
+        <img *ngIf="!isSidenavOpen" class="img-icon" src="assets/icons/navbar/mobile_nav_diagonal2.svg" alt="Logo">
+        <mat-icon *ngIf="!isSidenavOpen">menu</mat-icon>
+        <mat-icon *ngIf="isSidenavOpen">close</mat-icon>
+    </button>
+
+    <mat-sidenav-container class="sidenav-container">
+        <mat-sidenav #sidenav id="sidenav" mode="over" [opened]="isHandset$ | async">
+            <mat-nav-list id="mat-nav-list">
+                <!-- Menú principal -->
+                <mat-list-item>
+                    <a class="text-open-sans" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                        <mat-icon matListIcon>home</mat-icon>Inicio
+                    </a>
+                </mat-list-item>
+
+                <!-- Servicios -->
+                <mat-list-item (click)="toggleSubmenu('services', $event)">
+                    <mat-icon matListIcon>business</mat-icon>
+                    <span>Servicios</span>
+                    <mat-icon *ngIf="!isMenuOpen('services')" class="expand-icon">chevron_right</mat-icon>
+                    <mat-icon *ngIf="isMenuOpen('services')" class="expand-icon">expand_more</mat-icon>
+                </mat-list-item>
+
+                <!-- Submenú de Servicios -->
+                <mat-nav-list *ngIf="isMenuOpen('services')" class="sidenav-submenu">
+                    <ng-container *ngFor="let submenu of servicesSubmenus">
+                        <mat-list-item (click)="toggleSubmenu(submenu.title, $event)">
+                            <span>{{ submenu.title }}</span>
+                            <mat-icon *ngIf="!isMenuOpen(submenu.title)" class="expand-icon">chevron_right</mat-icon>
+                            <mat-icon *ngIf="isMenuOpen(submenu.title)" class="expand-icon">expand_more</mat-icon>
+                        </mat-list-item>
+
+                        <!-- Sub-submenú de cada categoría de servicios -->
+                        <mat-nav-list *ngIf="isMenuOpen(submenu.title)" class="sidenav-submenu">
+                            <mat-list-item *ngFor="let item of submenu.items">
+                                <a class="text-open-sans ml-5" [routerLink]="item.link" routerLinkActive="active">
+                                    {{ item.label }}
+                                </a>
+                            </mat-list-item>
+                        </mat-nav-list>
+                    </ng-container>
+                </mat-nav-list>
+
+                <!-- Otras secciones del menú -->
+                <mat-list-item>
+                    <a class="text-open-sans" routerLink="/nosotros" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                        <mat-icon matListIcon>info</mat-icon>Sobre nosotros
+                    </a>
+                </mat-list-item>
+
+                <mat-list-item>
+                    <a class="text-open-sans" routerLink="/propiedades" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                        <mat-icon matListIcon>location_city</mat-icon>Propiedades
+                    </a>
+                </mat-list-item>
+
+                <mat-list-item>
+                    <a class="text-open-sans" routerLink="/noticias" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                        <mat-icon matListIcon>article</mat-icon>Noticias y artículos
+                    </a>
+                </mat-list-item>
+
+                <mat-list-item>
+                    <a class="text-open-sans" routerLink="/contacto" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                        <mat-icon matListIcon>contact_mail</mat-icon>Contacto
+                    </a>
+                </mat-list-item>
+            </mat-nav-list>
+        </mat-sidenav>
+    </mat-sidenav-container>
+</div>  

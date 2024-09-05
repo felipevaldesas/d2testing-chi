@@ -1,0 +1,26 @@
+.site-map-principal {
+    background-color: #101010;
+    display: flex;
+    justify-content: center;
+
+    .col-section {
+        margin-top: 7em;
+        margin-bottom: 7em;    
+    }
+
+    .site-map-text {
+        color: #F3F3F3;
+        max-width: 1083px;
+        text-align: center;
+
+        a {
+            color: #F3F3F3;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #C3BFBF;
+            text-decoration: underline;
+        }
+    }
+}

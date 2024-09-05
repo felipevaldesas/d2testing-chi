@@ -1,0 +1,103 @@
+<div class="services-principal" id="header-section">
+    <div class="row text-services">
+        <div class="col-md-12" id="title-col">
+            <h1> 
+                Soluciones en Arriendo y Venta de Bodegas Industriales
+            </h1>
+        </div>
+        <div class="col-md-12">
+            <h3 class="title-services" 
+                    data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500"
+            >
+                <span class="highlighted"> "Te acompañamos en todas las fases </span> del proceso, 
+                desde la búsqueda y desarrollo hasta la adquisición”
+            </h3>
+            <div class="contact-phone">
+                <a href="https://api.whatsapp.com/send?phone=56958794809" target="_blank" class="whatsapp-button">
+                    <i class="fa fa-whatsapp social-icon"></i> Agendar una asesoría
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="cards-section">
+    <div class="row text-services">
+        <div class="col-md-12 office-col">
+            <h2 class="title-services">
+                Industrial consulting
+            </h2>
+            <h3 class="subtitle-services">
+                Consultores de bodegas industriales
+            </h3> 
+            <p class="description-title text-light">
+                Brindamos a propietarios y arrendatarios estrategias para encontrar, arrendar, vender y desarrollar bodegas industriales,
+                a través de evaluaciones financieras, campañas de marketing e innovación en sistemas tecnológicos.
+            </p>
+            <app-generic-cards [styles]="stylesIndustrial" [data]="industrialCards"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="our-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <h2 class="title-services">
+                ¿Por qué elegirnos?
+            </h2>
+            <p class="description-title">
+                En Diagonal2, combinamos nuestra amplia experiencia con una red extensa de contactos para ofrecerte soluciones personalizadas 
+                y negociaciones efectivas, garantizando que encuentres el espacio ideal para tu negocio.
+            </p>
+            <app-generic-cards [styles]="stylesOurCards" [data]="ourCards"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="why-us-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <app-generic-why-us [data]="whyUsData"></app-generic-why-us>
+        </div>
+    </div>    
+</div>
+<div class="services-principal" id="work-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <h2 class="title-services">
+                Proceso de trabajo
+            </h2>
+            <p class="description-title">
+                Guiamos a nuestros clientes desde la selección de opciones hasta la firma del contrato, asegurando un proceso claro y efectivo en cada etapa.              
+            </p>
+            <app-generic-cards [styles]="stylesWorkFlowCards" [data]="workflowCards"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="team-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <h2 class="title-services">
+                Nuestro equipo de consultores de locales comerciales
+            </h2>
+            <app-generic-cards [data]="teamCards" [styles]="stylesTeam"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="cards-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <h2 class="title-services mb-5" align="center">
+                Noticias y Artículos
+            </h2>
+            <app-generic-cards [styles]="stylesNews" [data]="newsCards"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="contact-section">
+    <div class="row text-services">
+        <div class="col-md-12 col-contact">
+            <app-generic-contact [text]="contactText"></app-generic-contact>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

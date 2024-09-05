@@ -1,0 +1,161 @@
+<div class="services-principal" id="header-section">
+    <div class="row text-services">
+        <div class="col-md-12" id="title-col">
+            <img class="img-icon" src="assets/icons/properties/logo_D2.svg" alt="Logo">
+        </div>
+        <div class="info-col">
+            <div class="col-md-12" id="desc-col">
+                <h3 class="title-services" 
+                        data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1500"
+                >
+                    Encuentra oficinas, locales, bodegas y suelos en arriendo y venta.
+                </h3>
+            </div>
+            <div class="col-md-12">
+                <div class="main-search">
+                    <form class="search-form" [formGroup]="searchForm"> 
+                        <div class="row">
+                            <div class="col-md-3 box">
+                                <mat-form-field>
+                                    <mat-select formControlName="property_type" placeholder="Oficina">
+                                        <mat-option *ngFor="let option of propertyTypes" [value]="option.id">
+                                        {{ option.name }}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-3 box box-finance">
+                                <mat-form-field>
+                                    <mat-select formControlName="finance_operation" placeholder="Arriendo">
+                                        <mat-option *ngFor="let option of financeOperations" [value]="option.id">
+                                        {{ option.name }}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>                            
+                            </div>
+                            <div class="col-md-6 box box-filter">
+                                <button class="btn-filter" type="submit">
+                                    <span class="material-symbols-outlined matt-icon"> tune </span>
+                                    Filtros
+                                </button>
+                            </div>
+                            <div class="col-md-12 box">
+                                <input formControlName="search" placeholder=" Ingrese la comuna ..." type="text" class="input form-control"
+                                [ngClass]="{'valid': searchForm.get('search')?.valid,
+                                            'invalid': searchForm.get('search')?.invalid && (searchForm.get('search')?.dirty || searchForm.get('search')?.touched)}" />
+                            </div>
+                            <div class="col-md-12 box">
+                                <button mat-raised-button class="btn-submit" type="submit">Buscar</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="property-types">
+                        <p>
+                            <span class="material-symbols-outlined matt-icon"> apartment </span>
+                            Oficinas
+                        </p>
+                        <p>
+                            <span class="material-symbols-outlined matt-icon"> storefront </span>
+                            Locales
+                        </p>
+                        <p>
+                            <span class="material-symbols-outlined matt-icon"> warehouse </span>
+                            Bodegas
+                        </p>
+                        <p>
+                            <img class="matt-img" src="/assets/icons/services/icon_white_land.svg">
+                            Suelos
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mt-5">
+            <section class="most-searched">
+                <h2 class="title-searched">
+                    <span class="material-symbols-outlined icon-title"> search </span>
+                    Lo más buscado
+                </h2>
+                <div class="search-links">
+                    <div class="category">
+                        <h3>Oficinas en arriendo</h3>
+                        <ul>
+                            <li>Providencia</li>
+                            <li>Las Condes</li>
+                            <li>Vitacura</li>
+                            <li>Santiago</li>
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <h3>Locales en arriendo</h3>
+                        <ul>
+                            <li>Lo Barnechea</li>
+                            <li>Providencia</li>
+                            <li>Vitacura</li>
+                            <li>Santiago</li>
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <h3>Bodegas en arriendo</h3>
+                        <ul>
+                            <li>Quilicura</li>
+                            <li>Cerrillos</li>
+                            <li>San Joaquín</li>
+                            <li>Pudahuel</li>
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <h3>Suelos en arriendo</h3>
+                        <ul>
+                            <li>San Bernardo</li>
+                            <li>Lampa</li>
+                            <li>Antofagasta</li>
+                            <li>Pudahuel</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="search-links">
+                    <div class="category">
+                        <h3>Oficinas en venta</h3>
+                        <ul>
+                            <li>Providencia</li>
+                            <li>Las Condes</li>
+                            <li>Vitacura</li>
+                            <li>Santiago</li>
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <h3>Locales en venta</h3>
+                        <ul>
+                            <li>Lo Barnechea</li>
+                            <li>Providencia</li>
+                            <li>Vitacura</li>
+                            <li>Santiago</li>
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <h3>Bodegas en venta</h3>
+                        <ul>
+                            <li>Quilicura</li>
+                            <li>Cerrillos</li>
+                            <li>San Joaquín</li>
+                            <li>Pudahuel</li>
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <h3>Suelos en venta</h3>
+                        <ul>
+                            <li>San Bernardo</li>
+                            <li>Lampa</li>
+                            <li>Antofagasta</li>
+                            <li>Pudahuel</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>        
+        </div>
+    </div>
+</div>
+  

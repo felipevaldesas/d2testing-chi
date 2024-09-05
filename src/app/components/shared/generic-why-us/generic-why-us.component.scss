@@ -1,0 +1,65 @@
+.why-us-row {
+    color: #F3F3F3;
+    padding: 3em 1em 3em 1em;
+    text-align: center;
+    width: 100%;
+    .row-description {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: unset;
+    }
+    .title {
+        font-weight: 700;
+        margin-bottom: 5%;
+        font-size: 36px;
+    }
+    .text-icon {
+        height: 1.5em;
+        color: #FFD966;
+        font-weight: 800;
+        font-size: 48px;
+        display: flex;
+        justify-content: center;
+        .icon-symbol {
+            font-size: 1.3em;
+        }
+    }
+    .text-icon-contract {
+        margin-inline-end: 5%;
+    }
+    .info-icon {
+        font-weight: 700;
+        font-size: 20px;
+        display: inline-flex;
+        align-items: center;
+    }
+}
+
+.line {
+    width: 100%;
+    display: block;
+}
+
+.line-up {
+    padding: 7em 0em 0em 0em;
+}
+
+@media (max-width: 768px) {
+    .why-us-row {
+        padding: 2em 1em 0em 1em;
+        .row-description {
+            .col-icon {
+                margin-top: 15%;
+            }
+        }
+        .text-icon {
+            font-size: 38px;
+        }
+    }
+    .line {
+        width: unset;
+        position: relative;
+        right: 1em;
+    }
+}

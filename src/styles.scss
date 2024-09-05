@@ -1,0 +1,54 @@
+@use './../node_modules/@angular/material' as mat;
+@use './../node_modules/bootstrap/scss/bootstrap';
+@include mat.core();
+
+$myapp-theme-primary: mat.m2-define-palette(mat.$m2-indigo-palette, A400, A100, A700);
+$myapp-theme-accent: mat.m2-define-palette(mat.$m2-indigo-palette);
+$myapp-theme-warn: mat.m2-define-palette(mat.$m2-red-palette);
+
+$myapp-theme: mat.m2-define-light-theme((
+  color: (
+    primary: $myapp-theme-primary,
+    accent: $myapp-theme-accent,
+    warn: $myapp-theme-warn,
+  )
+));
+
+@include mat.all-component-themes($myapp-theme);
+
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto&display=swap');
+@import "../node_modules/material-symbols/outlined.css";
+
+
+html,
+body {
+    height: 100%;
+    background-color: #101010;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+    .description em {
+      color: #FFD966;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 20px;
+    overflow-x: hidden;
+}
+
+.text-center {
+    text-align: center;
+}
+
+// Define specific class for titles with a different font
+.title-font {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold; // Adjust the weight as needed
+}
+
+.text-open-sans {
+    font-family: 'Open Sans', sans-serif;
+}

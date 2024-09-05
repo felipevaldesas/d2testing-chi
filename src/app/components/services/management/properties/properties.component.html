@@ -1,0 +1,125 @@
+<div class="services-principal" id="header-section">
+    <div class="row text-services">
+        <div class="col-md-12" id="title-col">
+            <h1> 
+                Property Management
+            </h1>
+        </div>
+        <div class="col-md-12">
+            <h3 class="title-services" 
+                    data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500"
+            >
+                “Aseguramos la <span class="highlighted"> máxima disponibilidad </span>
+                operativa de toda la infraestructura común y de servicios”
+            </h3>
+            <div class="contact-phone">
+                <a href="https://api.whatsapp.com/send?phone=56934284582" target="_blank" class="whatsapp-button">
+                    <i class="fa fa-whatsapp social-icon"></i> Agendar una asesoría
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="cards-section">
+    <div class="row text-services">
+        <div class="col-md-12 office-col">
+            <h2 class="title-services">
+                Property Management
+            </h2>
+            <h3 class="subtitle-services">
+                Gestión de servicios e infraestructuras comunes
+            </h3>
+            <p class="description-title text-light">
+                Gestionamos las propiedades de nuestros clientes enfocándonos en todos los aspectos operacionales, reglamentarios, contables, legales y 
+                recursos humanos de los inmuebles administrados, garantizando su optimo funcionamiento y la mayor valorización en el tiempo para los propietarios e inversionistas.
+            </p>
+            <h2 class="title-services mb-5">
+                Servicios para propietarios
+            </h2>
+            <app-generic-cards [styles]="stylesProperty" [data]="propertyCards"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="our-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <h2 class="title-services">
+                Beneficios para nuestros clientes
+            </h2>
+            <app-generic-cards [styles]="stylesBenefitsCards" [data]="benefitsCards"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="why-us-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <app-generic-why-us [data]="whyUsData"></app-generic-why-us>
+        </div>
+    </div>    
+</div>
+<div class="services-principal" id="work-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <h2 class="title-services">
+                Administración
+            </h2>
+            <p class="description-title">
+                Principales funciones para la administración.
+            </p>
+            <app-generic-cards [styles]="stylesManagementCards" [data]="managementCards"></app-generic-cards>
+        </div>          
+    </div>
+</div>
+<div class="services-principal" id="work-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <h2 class="title-services">
+                Operación
+            </h2>
+            <p class="description-title">
+                Principales funciones para la gestión operacional.
+            </p>
+            <app-generic-cards [styles]="stylesManagementCards" [data]="operationCards"></app-generic-cards>
+        </div>        
+    </div>
+</div>
+<div class="services-principal" id="testimonies-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <h2 class="title-services">
+                Track record
+            </h2>
+            <app-generic-carousel [extendedData]="testimoniesMaintenance"></app-generic-carousel>
+        </div> 
+    </div>
+</div>
+<div class="services-principal" id="team-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <h2 class="title-services">
+                Nuestro equipo de Property management
+            </h2>
+            <app-generic-cards [data]="teamCards" [styles]="stylesTeam"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="cards-section">
+    <div class="row text-services">
+        <div class="col-md-12">
+            <h2 class="title-services mb-5" align="center">
+                Noticias y Artículos
+            </h2>
+            <app-generic-cards [styles]="stylesNews" [data]="newsCards"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="contact-section">
+    <div class="row text-services">
+        <div class="col-md-12 col-contact">
+            <app-generic-contact [text]="contactText"></app-generic-contact>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

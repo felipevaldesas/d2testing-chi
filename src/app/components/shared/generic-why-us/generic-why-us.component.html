@@ -1,0 +1,24 @@
+<img class="line line-up" src="/assets/images/home/why-us/line-up.png" alt="Line Up" id="line-up">
+<div class="why-us-row">
+    <div class="row">
+        <h2 class="title">
+            ¿Por qué elegir a nuestros expertos?
+        </h2>
+    </div>
+    <div class="row row-description">
+        <div *ngFor="let item of data" [ngClass]="getColClass()" class="col-icon">
+            <p class="text-icon">
+                <ng-container *ngIf="item.title"> 
+                    {{item.title}} 
+                </ng-container>
+                <img *ngIf="item.iconUrl" [src]="item.iconUrl" alt="{{item.title}}">
+                <span   *ngIf="item.iconName" 
+                        class="material-symbols-outlined icon-symbol">
+                    {{item.iconName}} 
+                </span>            
+            </p>
+            <p class="info-icon" [innerHTML]="item.description"></p>
+        </div>
+    </div>
+</div>  
+<img class="line" src="/assets/images/home/why-us/line-down.png" alt="Line Up" id="line-up">

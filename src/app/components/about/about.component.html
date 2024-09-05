@@ -1,0 +1,135 @@
+<div class="services-principal" id="header-section">
+    <div class="row text-services">
+        <div class="col-md-12" id="title-col">
+            <img class="img-icon" src="assets/icons/navbar/diagonal2-real-estate-partner-logo-nav.svg" alt="Logo">
+        </div>
+        <div class="col-md-12 col-title-about">
+            <h1> Sobre nosotros </h1>
+        </div>
+        <div class="col-md-12">
+            <h3 class="title-services" 
+                    data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500"
+            >
+                We think <span class="highlighted"> global </span> and act local
+            </h3>
+            <div class="contact-phone">
+                <a href="https://api.whatsapp.com/send?phone=56994763258" target="_blank" class="whatsapp-button">
+                    <i class="fa fa-whatsapp social-icon"></i> Agendar una asesoría
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="cards-section">
+    <div class="row text-services">
+        <div class="col-md-12 office-col">
+            <p class="description-title text-light">
+                Diagonal2 Corporate Services inició sus operaciones en Chile en el año 2018.
+                Una división altamente especializada en servicios inmobiliarios dirigidos a
+                grandes empresas. Actualmente Diagonal2 se encuentra entre las 5
+                principales consultoras inmobiliarias comerciales del país, inaugurando una
+                nueva sucursal en Bogotá, Colombia, a principios del 2023. <br><br>
+
+                Ofrecemos asesoría especializada en múltiples ámbitos para los sectores de
+                Oficina, Industrial y Retail, con soluciones inmobiliarias integrales de corretaje
+                comercial, consultoría estratégica y gestión de activos inmobiliarios. <br><br>
+
+                En Chile y Colombia, Diagonal2 ostenta el título de "preferred provider" de la
+                consultora inmobiliaria internacional Savills, empresa que cotiza en la bolsa
+                de Londres y que cuenta con una historia de más de 150 años.<br>
+            </p>
+        </div>
+        <div class="col-md-12 col-comment">
+            <div class="row">
+                <div class="col-md-1 comment-icon comment-icon-left">
+                    <i class="fa fa-quote-left"></i>
+                </div>
+                <div class="col-md-10">
+                    <p class="comment-title text-light">
+                        Construimos alianzas duraderas con nuestros partners, <br> contribuyendo a su éxito en la región.
+                    </p>
+                </div>
+                <div class="col-md-1 comment-icon comment-icon-right">
+                    <i class="fa fa-quote-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 office-col founder-col">
+            <div class="row row-founder">
+                <h2 class="title-services">
+                    Fundadores
+                </h2>
+                <app-generic-cards [styles]="stylesFounders" [data]="foundersCards"></app-generic-cards>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="services-principal" id="cards-section">
+    <div class="row text-services">
+        <div class="col-md-12 office-col mt-5 mb-5">
+            <h2 class="title-services title-office">
+                Países de operación
+            </h2>
+            <img class="img-country" src="assets/images/home/properties/where_are_us.svg" alt="">
+        </div>
+        <div class="col-md-12 mt-5 mb-5">
+            <app-generic-cards [styles]="stylesCountryCards" [data]="countryCards"></app-generic-cards>
+        </div>
+        <div class="col-md-12 mt-5 mb-5">
+            <app-generic-cards [styles]="stylesAbout" [data]="aboutCards"></app-generic-cards>
+        </div>
+        <div class="col-md-12 office-col mt-5">
+            <h2 class="title-services title-office">
+                Nuestros Valores
+            </h2>
+            <app-generic-cards [styles]="stylesOurCards" [data]="ourCards"></app-generic-cards>
+        </div>
+    </div>
+</div>
+<div id="timeline-section">
+    <h2>Hitos</h2>
+    <div class="timeline">
+        <div *ngFor="let event of timelineEvents; let i = index" class="timeline-item" [ngClass]="{ 'right': i % 2 !== 0, 'left': i % 2 === 0 }">
+            <div class="timeline-icon">
+                <span *ngIf="event.icon" class="material-symbols-outlined">{{ event.icon }}</span>
+                <img *ngIf="event.img" [src]="event.img" class="img-timeline" alt="timeline icon">
+            </div>
+            <div class="timeline-content">
+                <h3>{{ event.year }}</h3>
+                <p>{{ event.description }}</p>
+            </div>
+        </div>
+    </div>
+</div>   
+<div class="services-principal" id="cards-section">
+    <div class="row text-services">
+        <div class="col-md-12 col-comment" id="col-comment">
+            <div class="row">
+                <div class="col-md-1 comment-icon comment-icon-left">
+                    <i class="fa fa-quote-left"></i>
+                </div>
+                <div class="col-md-10">
+                    <p class="comment-title text-light">
+                        Your Real Estate Partner
+                    </p>
+                </div>
+                <div class="col-md-1 comment-icon comment-icon-right">
+                    <i class="fa fa-quote-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mt-5 mb-5">
+            <h2 class="title-services title-office">
+                Nuestro Equipo
+            </h2>
+            <app-generic-cards class="desktop-team d-none d-md-block" [styles]="stylesTeam" [data]="teamCards"></app-generic-cards>
+            <app-generic-track-record class="mobile-team d-block d-md-none" [icons]="teamCards"></app-generic-track-record>
+        </div>
+        <div class="col-md-12 mt-5 mb-5">
+            <app-generic-contact [text]="contactText"></app-generic-contact>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

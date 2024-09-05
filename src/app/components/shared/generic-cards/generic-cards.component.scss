@@ -1,0 +1,372 @@
+.horizontal-scroll {
+    .data-card {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 50px;
+        justify-content: center;    
+        .col-md-4 {
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.19);
+            padding: 2em 2em;
+            border-radius: 20px;
+            color: black;
+            text-align: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 48vw;
+            border: unset;    
+            background-color: #101010;
+    
+            .text-panel {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .icon-symbol {
+                    font-size: 3em;
+                }
+                .icon-url {
+                    width: 38px;
+                    display: flex;
+                    align-self: center;
+                }                
+                .title {
+                    font-size: 25px;
+                    font-weight: 700;
+                    height: 3em;
+                    width: 65%;
+                    align-self: center;
+                }            
+                .list {
+                    font-size: 14px;
+                    font-weight: 400;
+                    font-style: italic;
+                    position: absolute;
+                    top: 6em;
+                    text-align: left;
+                    list-style: disc;
+                    color: #B0B0B0;
+                }
+                .description {
+                    font-size: 18px;
+                    font-weight: 400;
+                    em {
+                        color: #FFD966; // Aquí defines el color para la etiqueta <em>
+                    }
+                }
+                .btn-container-card {
+                    margin-top: auto;
+                    display: flex;
+                    justify-content: center;
+                    height: 2em;
+                    .btn-view {
+                        background-color: #185CFF;
+                        color: #F1F1F1;
+                        width: 70%;
+                        border-radius: 64px;
+                        border: none;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 14px;
+                        font-weight: 500;
+                        box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.19);
+                        text-decoration: unset;
+                    }
+                }
+                .social-col {
+                    justify-content: center;
+                    gap: 1em;
+                    width: 100%;
+                    .social-icon {
+                        color: #080C15;
+                        background-color: #8B8E98;
+                        border-radius: 3em;
+                        font-size: 21px;
+                        width: 35px;
+                        height: 35px;
+                        padding: 0.5em;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-decoration: none;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            .team-panel {   
+                color: #F5D062;
+                .icon-url {
+                    width: 198px;
+                    height: 132px;
+                    border-radius: 10px;
+                    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.19);
+                } 
+                .title {
+                    width: unset;
+                    height: 1em;
+                    margin-top: 1em;                
+                }
+            }
+        }
+    }
+    .team-card {
+        flex-wrap: wrap;
+        .card {
+            box-shadow: 0px 12px 30px #000;
+            border-radius: 8px;
+            background-color: #101010;
+
+            .text-panel {
+                justify-content: center;
+                align-items: center;
+                .icon-url {
+                    border-radius: 8px;
+                    width: 100%;
+                }        
+            }
+        }
+    }
+    .news-card {
+        .col-md-4 {
+            text-align: left;
+            background-color: #101010;
+            margin-bottom: 5%;
+            .text-panel {
+                color: #FFFFFF;
+                .section-title {
+                    font-weight: 400;
+                    font-size: 10px;
+                    margin-bottom: unset;
+                }
+                .title {
+                    width: 100%;
+                    text-align: left;
+                    height: 1em;
+                    margin-top: 1em;
+                }
+                .icon-url {
+                    border-radius: 8px;
+                    width: 100%;
+                } 
+                .row-user-info {
+                    display: flex;
+                    align-items: center;
+                    font-size: 10px;
+                    .icon {
+                        border-radius: 25px;
+                        width: 36px;
+                        height: 36px;
+                    } 
+                    .name {
+                        font-size: 10px;
+                        margin-bottom: unset;
+                    }
+                    .role {
+                        font-style: italic;
+                        font-size: 10px;
+                        margin-bottom: unset;
+                    }
+                } 
+                .btn-container-news {
+                    display: flex;
+                    justify-content: right;
+                    height: 2em;
+                    .btn-view {
+                        background-color: #101010;
+                        color: #b7b7b7;
+                        width: 45%;
+                        border-radius: 64px;
+                        border: none;
+                        display: flex;
+                        align-items: center;
+                        justify-content: right;
+                        font-size: 14px;
+                        font-weight: 500;
+                        box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.19);
+                        text-decoration: unset;
+                    }
+                }
+            }
+        }
+    }
+    .mini-card {
+        gap: 80px !important;
+        justify-content: center !important;
+        .col-md-4 {
+            background-color: #1B1A1D;
+            text-align: left;
+            display: unset;
+            border-radius: 12px;
+            .text-panel {
+                .title {
+                    height: 3.5em;
+                    width: 100%;
+                    text-align: unset;
+                }
+                .icon-url {
+                    align-self: unset;
+                }
+                .icon-symbol {
+                    color: #8B8E98;
+                    //margin-bottom: 0.5em;
+                }
+            }
+        }
+    }
+    .our-card {
+        gap: 30px !important;
+        justify-content: center !important;
+        flex-flow: wrap;
+        margin-top: 5%;
+        .col-md-4 {
+            background-color: transparent;
+            border: solid 1px white;
+            border-radius: 12px;
+            .text-panel {
+                .title {
+                    margin-top: 1em;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .process-card {
+        gap: 30px !important;
+        justify-content: center !important;
+        flex-flow: wrap;
+        margin-top: 5%;
+    }
+    .workflow-card {        
+        justify-content: center !important;
+        .col-md-4 {
+            background-color: #1B1A1D;
+            text-align: left;
+            border-radius: 12px;
+            border: unset;   
+            justify-content: center;
+            .text-panel {
+                text-align: center;
+                justify-content: center;
+                .title {
+                    width: 100%;
+                    text-align: unset;
+                }
+                &.align-center {
+                    text-align: center;
+                    justify-content: center;
+                }
+                .icon-symbol {
+                    color: #FFD966;
+                }
+            }
+        }
+        .workflow-card-special {
+            background-color: transparent;
+            border: solid 1px white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .text-panel {
+                text-align: center;
+                justify-content: center;
+            }
+        }
+        .text-dark {
+            .workflow-panel {
+                text-align: center;
+                justify-content: center;
+                padding: 0.5em;
+                .icon-symbol {
+                    color: black;
+                    font-size: 4em !important;
+                }
+                .description {
+                    display: none;
+                }
+            }
+        }
+        .card-index {
+            position: absolute;
+            right: 92%;
+            bottom: 92%;
+            background-color: white;
+            color: black;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold
+        }
+    }
+    .founder-card .col-md-4{
+        .text-panel {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            height: 100%;
+            .icon-url {
+                width: 50%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 12px;
+            }
+            .text-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                text-align: left;
+                align-self: center;
+                margin-inline-start: 5%;
+
+                .title {
+                    height: 50%;
+                    text-align: left;
+                    width: 100%;
+                }
+
+                .description {
+                    height: 50%;
+                }
+            }
+        }
+    }    
+       
+}
+  
+@media (max-width: 768px) {
+    .horizontal-scroll {
+        .data-card {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            margin-top: 3em;
+            margin-bottom: 3em;
+            gap: 20px !important;    
+            .col-md-3 {
+                margin: 0 15px 15px !important;
+                width: 90% !important;
+                height: 37em;
+            }
+        }
+        .mini-card {
+            .col-md-4 {
+                width: 90% !important;
+                padding: 1em !important;
+                text-align: center;
+            }
+        }
+        .workflow-card { 
+            .card-index {   
+                display: none;
+            }
+        }
+    }
+  
+    .text { 
+        padding: unset;
+    }
+}
+  
